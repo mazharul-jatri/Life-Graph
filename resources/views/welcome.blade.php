@@ -9,5 +9,6 @@
 </head>
 <body>
     <h1>Welcome to the home page.</h1>
+    <p>This is a simple Laravel application.</p>
 </body>
 </html>

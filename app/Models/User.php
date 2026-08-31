@@ -29,4 +29,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function timelines(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(LifeTimeline::class);
+    }
+
+    public function profile(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    public function activities(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(LifeActivity::class);
+    }
 }
